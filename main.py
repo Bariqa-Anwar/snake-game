@@ -24,17 +24,7 @@ print(f"You chose {reverse_dict[me]}\nComputer chose {reverse_dict[computer]}")
 if me == computer:
     print("It's a Tie!🤷‍♂️")
 
-elif (computer == -1 and me == 1):
-            print("You win🏅")
-elif (computer == 1 and me == -1):
-            print("You lose!🤦‍♀️")
-elif (computer == 0 and me == 1):
-            print("You lose!🤦‍♀️")
-elif (computer == 0 and me == -1):
-            print("You win👑")
-elif (computer == -1 and me == 0):
-            print("You lose!🤦‍♀️")
-elif (computer == 1 and me ==0):
-            print("You win👑")
+elif (computer, me) in [(-1, 1), (0, -1), (1, 0)]:
+    print("You win!🏅")
 else:
-    print("Something went wrong!😐")
+    print("You lose!🤦‍♀️")
